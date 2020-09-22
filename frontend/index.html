@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Multiplayer Snakeway</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        #gameScreen{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section class="vh-100">
+        <div class="container h-100">
+            <div id="initialScreen"  class="h-100">
+                <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                    <h1> Multiplayer Snakeway</h1>
+                    <button
+                        type="submit"
+                        class="btn btn-success"
+                        id="newGameButton">
+                        Create New Game
+                    </button>
+                    <div>OR</div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Enter Game Code" id="gameCodeInput"/>
+                    </div>
+                    <button
+                        type="submit"
+                        class="btn btn-success"
+                        id="joinGameButton">
+                        Join Game
+                    </button>
+                </div>
+            </div>
+        
+            <div id="gameScreen" class="h-100">
+                <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                    
+                    <h1>Your Game Code is: <span id="gameCodeDisplay"></span></h1>
+
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
